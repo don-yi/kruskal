@@ -40,8 +40,13 @@ void   Head::Init(const size_t value ) {
 	counter = 1;
 }
 
-void   Head::Join( Head* pHead2 ) {
-	/* .... */
+void   Head::Join( Head* pHead2 )
+{
+  last->SetNext(pHead2->GetFirst());
+  last = pHead2->GetLast();
+
+  pHead2->counter = 0;
+  pHead2->first = pHead2->last = nullptr;
 }
 
 std::ostream& operator<< (std::ostream& os, Head const& head) {
