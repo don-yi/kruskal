@@ -24,10 +24,12 @@ public:
   Node* Next() const;
   void SetNext(Node* new_next);
   size_t Value() const;
-  size_t value;
+
+  friend  std::ostream& operator<< (std::ostream& os, Node const& node);
 
 private:
   Node* next;
+  size_t value;
 };
 
 class Head
@@ -41,9 +43,11 @@ public:
   Node* GetLast() const;
   void Init(size_t value);
   void Join(Head* pHead2);
-  size_t counter;
+
+  friend std::ostream& operator<< (std::ostream& os, Head const& head);
 
 private:
+  size_t counter;
   Node* first;
   Node* last;
 };

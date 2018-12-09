@@ -44,6 +44,7 @@ void   Head::Join( Head* pHead2 )
 {
   last->SetNext(pHead2->GetFirst());
   last = pHead2->GetLast();
+  counter += pHead2->counter;
 
   pHead2->counter = 0;
   pHead2->first = pHead2->last = nullptr;
