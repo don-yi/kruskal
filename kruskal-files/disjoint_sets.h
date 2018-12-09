@@ -44,11 +44,10 @@ public:
   size_t counter;
 
 private:
-  Node* last;
   Node* first;
+  Node* last;
 };
 
-////////////////////////////////////////////////////////////
 class DisjointSets {
 	public:
 		DisjointSets( size_t const& capacity );

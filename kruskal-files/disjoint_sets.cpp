@@ -18,18 +18,24 @@ std::ostream& operator<< (std::ostream& os, Node const& node) {
 Head::Head() : counter(), first(), last() {}
 
 Head::~Head() {
-	/* .... */
+  auto* walker = first;
+  while (walker)
+  {
+    auto* tmp = walker->Next();
+    delete walker;
+    walker = tmp;
+  }
 }
 
 size_t Head::Size() const      { return counter; }
 
-void   Head::Reset()           { counter = 0; last = first = NULL; }
+void   Head::Reset()           { counter = 0; last = first = nullptr; }
 
 Node*  Head::GetFirst() const  { return first; }
 
 Node*  Head::GetLast()  const  { return last; }
 
-void   Head::Init( size_t value ) {
+void   Head::Init(const size_t value ) {
 	first = last = new Node( value );
 	counter = 1;
 }
