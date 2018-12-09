@@ -238,12 +238,16 @@ void (*pTests[])(void) = {
 };
 
 int main( int argc, char ** argv) {
-	if (argc!=2) return 1;
-	else {
-		int test = 0;
-		std::sscanf(argv[1],"%i",&test);
-		pTests[ test ]();
-	}
+	//if (argc!=2) return 1;
+	//else {
+	//	int test = 0;
+	//	std::sscanf(argv[1],"%i",&test);
+	//	pTests[ test ]();
+	//}
+
+  test0();
+  std::getchar();
+
 	return 0;
 }
 

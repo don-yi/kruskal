@@ -15,7 +15,7 @@ std::ostream& operator<< (std::ostream& os, Node const& node) {
 }
 
 //class Head implementation
-Head::Head( ) : counter(), first(), last() {} 
+Head::Head() : counter(), first(), last() {}
 
 Head::~Head() {
 	/* .... */

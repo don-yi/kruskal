@@ -14,4 +14,84 @@
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="kruskal-files\out0">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="kruskal-files\out1">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="kruskal-files\out2">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="kruskal-files\out3">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="kruskal-files\out4">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="kruskal-files\out5">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="kruskal-files\out6">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="kruskal-files\out7">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="kruskal-files\out8">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="kruskal-files\out9">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="kruskal-files\out10">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="kruskal-files\out11">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="kruskal-files\out12">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="kruskal-files\out13">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="kruskal-files\out14">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="kruskal-files\out15">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="kruskal-files\out16">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="kruskal-files\out17">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="kruskal-files\handout.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="kruskal-files\driver.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="kruskal-files\disjoint_sets.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="kruskal-files\graph.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="kruskal-files\kruskal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="kruskal-files\disjoint_sets.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
 </Project>

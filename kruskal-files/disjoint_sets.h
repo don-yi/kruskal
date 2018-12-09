@@ -17,6 +17,37 @@ Rationale:
 #include <cstdlib>
 #include <fstream> //ostream, istream
 
+class Node
+{
+public:
+  Node(size_t const& value);
+  Node* Next() const;
+  void SetNext(Node* new_next);
+  size_t Value() const;
+  size_t value;
+
+private:
+  Node* next;
+};
+
+class Head
+{
+public:
+  Head();
+  ~Head();
+  size_t Size() const;
+  void Reset();
+  Node* GetFirst() const;
+  Node* GetLast() const;
+  void Init(size_t value);
+  void Join(Head* pHead2);
+  size_t counter;
+
+private:
+  Node* last;
+  Node* first;
+};
+
 ////////////////////////////////////////////////////////////
 class DisjointSets {
 	public:
@@ -30,6 +61,10 @@ class DisjointSets {
 		DisjointSets( DisjointSets const& ) = delete;
 		DisjointSets& operator=( DisjointSets const& ) = delete;
 	private:
+  size_t size;
+  size_t capacity;
+  size_t* representatives;
+  Head* heads;
 };
 
 

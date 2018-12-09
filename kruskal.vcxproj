@@ -115,6 +115,36 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <None Include="kruskal-files\out0" />
+    <None Include="kruskal-files\out1" />
+    <None Include="kruskal-files\out10" />
+    <None Include="kruskal-files\out11" />
+    <None Include="kruskal-files\out12" />
+    <None Include="kruskal-files\out13" />
+    <None Include="kruskal-files\out14" />
+    <None Include="kruskal-files\out15" />
+    <None Include="kruskal-files\out16" />
+    <None Include="kruskal-files\out17" />
+    <None Include="kruskal-files\out2" />
+    <None Include="kruskal-files\out3" />
+    <None Include="kruskal-files\out4" />
+    <None Include="kruskal-files\out5" />
+    <None Include="kruskal-files\out6" />
+    <None Include="kruskal-files\out7" />
+    <None Include="kruskal-files\out8" />
+    <None Include="kruskal-files\out9" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="kruskal-files\handout.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="kruskal-files\disjoint_sets.cpp" />
+    <ClCompile Include="kruskal-files\driver.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="kruskal-files\disjoint_sets.h" />
+    <ClInclude Include="kruskal-files\graph.h" />
+    <ClInclude Include="kruskal-files\kruskal.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
