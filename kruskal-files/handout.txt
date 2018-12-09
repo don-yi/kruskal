@@ -1,0 +1,21 @@
+Implement Kruskal algorithm using disjoint sets.
+
+Roadmap: 
+1) implement disjoint sets (files disjoint_sets.h and disjoint_sets.cpp)
+use driver_disjoint_sets.cpp (Makefile target gcc0_ds and msc0_ds). 
+Master output is in ds-out0,...,ds-out10
+
+2) implement Kruskal algorithm (file kruskal.h) using disjoint sets
+
+Targets (see Makefile):
+disjoint sets: gcc0_ds. msc0_ds. Executables are named same way. To test
+gcc0_ds.exe test > student_test, where test is a number 0,....,10
+compare student_test to master output out-ds...
+
+kruskal: gcc0, msc0. Executables are named same way. 
+Master output is in out0,out1,out2
+
+Submit:
+kruskal.h (no kruskal.cpp, so implementation goes into the header)
+disjoint_sets.cpp
+===============================================
