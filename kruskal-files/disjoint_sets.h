@@ -28,8 +28,8 @@ public:
   friend  std::ostream& operator<< (std::ostream& os, Node const& node);
 
 private:
-  Node* next;
   size_t value;
+  Node* next;
 };
 
 class Head
@@ -57,7 +57,7 @@ class DisjointSets {
 		DisjointSets( size_t const& capacity );
 		~DisjointSets();
 		void   Make( );
-		void   Join( size_t const& id1, size_t const& id2 );
+		void   Join( size_t const& id1, size_t const& id2 ) const;
 		size_t GetRepresentative( size_t const& id ) const;
 		size_t operator[]( size_t const& id ) const;
 		friend std::ostream& operator<< (std::ostream& os, DisjointSets const& ds);

@@ -75,8 +75,13 @@ void DisjointSets::Make( ) {
 	++size;
 }
 
-void DisjointSets::Join( size_t const& id1, size_t const& id2 ) {
-	/* .... */
+void DisjointSets::Join( size_t const& id1, size_t const& id2 ) const
+{
+  auto pHead1 = heads[id1];
+  auto pHead2 = heads[id2];
+  pHead1.Join(&pHead2);
+
+  representatives[id2] = representatives[id1];
 }
 
 size_t DisjointSets::GetRepresentative( size_t const& id ) const {
