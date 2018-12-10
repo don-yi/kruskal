@@ -42,10 +42,12 @@ void   Head::Init(const size_t value ) {
 
 void   Head::Join( Head* pHead2 )
 {
+  // Update nodes and counter which are being joined.
   last->SetNext(pHead2->GetFirst());
   last = pHead2->GetLast();
   counter += pHead2->counter;
 
+  // Update the vacant head.
   pHead2->counter = 0;
   pHead2->first = pHead2->last = nullptr;
 }
@@ -77,8 +79,12 @@ void DisjointSets::Make( ) {
 
 void DisjointSets::Join( size_t const& id1, size_t const& id2 ) const
 {
+  if (!heads[id1].Size() || !heads[id2].Size())
+  {
+    return;
+  }
   // Join id2->id1
-  if (heads[id1].Size() <= heads[id2].Size() && heads[id1].Size())
+  else if (heads[id1].Size() <= heads[id2].Size() && heads[id1].Size())
   {
     heads[id2].Join(&heads[id1]);
     representatives[id1] = representatives[id2];
