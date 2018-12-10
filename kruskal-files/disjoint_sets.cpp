@@ -77,8 +77,26 @@ void DisjointSets::Make( ) {
 
 void DisjointSets::Join( size_t const& id1, size_t const& id2 ) const
 {
-  heads[id2].Join(&heads[id1]);
-  representatives[id1] = representatives[id2];
+  // Join id2->id1
+  if (heads[id1].Size() <= heads[id2].Size() && heads[id1].Size())
+  {
+    heads[id2].Join(&heads[id1]);
+    representatives[id1] = representatives[id2];
+  }
+  // Join id1->id2
+  else
+  {
+    for (size_t i = 0; i < size; ++i)
+    {
+      // Skip the different representatives or zero size heads.
+      if (representatives[i] == representatives[id1] && heads[i].Size())
+      {
+        heads[i].Join(&heads[id2]);
+        representatives[id2] = representatives[id1];
+        break;
+      }
+    }
+  }
 }
 
 size_t DisjointSets::GetRepresentative( size_t const& id ) const {
