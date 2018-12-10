@@ -69,6 +69,27 @@
     <None Include="kruskal-files\out17">
       <Filter>Resource Files</Filter>
     </None>
+    <None Include="kruskal-files\g5_3">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="kruskal-files\g10">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="kruskal-files\g500">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="kruskal-files\g1000">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="kruskal-files\g1500">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="kruskal-files\g5">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="kruskal-files\g5_2">
+      <Filter>Resource Files</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Text Include="kruskal-files\handout.txt">

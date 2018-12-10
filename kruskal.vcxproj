@@ -115,6 +115,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <None Include="kruskal-files\g10" />
+    <None Include="kruskal-files\g1000" />
+    <None Include="kruskal-files\g1500" />
+    <None Include="kruskal-files\g5" />
+    <None Include="kruskal-files\g500" />
+    <None Include="kruskal-files\g5_2" />
+    <None Include="kruskal-files\g5_3" />
     <None Include="kruskal-files\out0" />
     <None Include="kruskal-files\out1" />
     <None Include="kruskal-files\out10" />

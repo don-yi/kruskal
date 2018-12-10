@@ -42,6 +42,12 @@ void   Head::Init(const size_t value ) {
 
 void   Head::Join( Head* pHead2 )
 {
+  // Skip joining empty head.
+  if (!pHead2->Size())
+  {
+    return;
+  }
+
   // Update nodes and counter which are being joined.
   last->SetNext(pHead2->GetFirst());
   last = pHead2->GetLast();
@@ -77,32 +83,34 @@ void DisjointSets::Make( ) {
 	++size;
 }
 
-void DisjointSets::Join( size_t const& id1, size_t const& id2 ) const
+void DisjointSets::Join(size_t const& id1, size_t const& id2) const
 {
-  if (!heads[id1].Size() || !heads[id2].Size())
+  auto const& from = id1;
+  auto const& to = id2;
+
+  auto fromRep = representatives[from];
+  auto toRep = representatives[to];
+
+  // Handle cycle.
+  if (fromRep == toRep)
   {
     return;
   }
-  // Join id2->id1
-  else if (heads[id1].Size() <= heads[id2].Size() && heads[id1].Size())
+
+  // reverse case
+  if (heads[fromRep].Size() > heads[toRep].Size())
   {
-    heads[id2].Join(&heads[id1]);
-    representatives[id1] = representatives[id2];
+    std::swap(fromRep, toRep);
   }
-  // Join id1->id2
-  else
+
+  // Update representative.
+  for (auto* n = heads[fromRep].GetFirst(); n; n = n->Next())
   {
-    for (size_t i = 0; i < size; ++i)
-    {
-      // Skip the different representatives or zero size heads.
-      if (representatives[i] == representatives[id1] && heads[i].Size())
-      {
-        heads[i].Join(&heads[id2]);
-        representatives[id2] = representatives[id1];
-        break;
-      }
-    }
+    representatives[n->Value()] = toRep;
   }
+
+  // Join the two heads.
+  heads[toRep].Join(&heads[fromRep]);
 }
 
 size_t DisjointSets::GetRepresentative( size_t const& id ) const {

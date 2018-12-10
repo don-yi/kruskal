@@ -44,6 +44,9 @@ public:
   void Init(size_t value);
   void Join(Head* pHead2);
 
+  Head(Head const&) = delete;
+  Head& operator=(Head const&) = delete;
+
   friend std::ostream& operator<< (std::ostream& os, Head const& head);
 
 private:
