@@ -1,3 +1,7 @@
+#define CRTDBG_MAP_ALLOC
+#include <cstdlib>
+#include <crtdbg.h>
+
 #include "kruskal.h"
 #include "graph.h"
 #include <vector>
@@ -245,8 +249,14 @@ int main( int argc, char ** argv) {
 	//	pTests[ test ]();
 	//}
 
-  test0();
-  std::getchar();
+  test1();
+
+  _CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
+  _CrtSetReportMode(_CRT_ERROR, _CRTDBG_MODE_DEBUG);
+  _CrtSetReportMode(_CRT_WARN, _CRTDBG_MODE_DEBUG);
+  _CrtSetBreakAlloc(-1);
+
+  //std::getchar();
 
 	return 0;
 }

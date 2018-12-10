@@ -4,9 +4,11 @@
 #include "graph.h"
 
 template <typename Vertex, typename Edge>
-std::vector<Edge> kruskal( Graph<Vertex,Edge> const& g ) {
+std::vector<Edge> kruskal( Graph<Vertex,Edge> const& g )
+{
     // ........... //
-	return mst;
+	//return mst;
+  return {};
 }
 
 #endif

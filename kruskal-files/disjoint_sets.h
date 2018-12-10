@@ -53,17 +53,17 @@ private:
 };
 
 class DisjointSets {
-	public:
-		DisjointSets( size_t const& capacity );
-		~DisjointSets();
-		void   Make( );
-		void   Join( size_t const& id1, size_t const& id2 ) const;
-		size_t GetRepresentative( size_t const& id ) const;
-		size_t operator[]( size_t const& id ) const;
-		friend std::ostream& operator<< (std::ostream& os, DisjointSets const& ds);
-		DisjointSets( DisjointSets const& ) = delete;
-		DisjointSets& operator=( DisjointSets const& ) = delete;
-	private:
+public:
+  DisjointSets(size_t const& capacity);
+  ~DisjointSets();
+  void   Make();
+  void   Join(size_t const& id1, size_t const& id2) const;
+  size_t GetRepresentative(size_t const& id) const;
+  size_t operator[](size_t const& id) const;
+  friend std::ostream& operator<< (std::ostream& os, DisjointSets const& ds);
+  DisjointSets(DisjointSets const&) = delete;
+  DisjointSets& operator=(DisjointSets const&) = delete;
+private:
   size_t size;
   size_t capacity;
   size_t* representatives;
